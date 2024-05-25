@@ -1,0 +1,36 @@
+@import "../../assets/variable.scss";
+
+.skills_details {
+  display: flex;
+  background-color: rgba(74, 188, 80, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 50px;
+
+  width: 100%;
+
+  &_category {
+    padding: 10px;
+    width: 100%;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      background-color: $green-btn;
+      padding: 10px 50px 10px 250px;
+
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    &_item {
+      font-weight: 500;
+      font-size: 15px;
+      margin: 10px;
+    }
+  }
+}
+
+.logo_skill {
+  width: 20px;
+}

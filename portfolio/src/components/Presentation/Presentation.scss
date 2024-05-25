@@ -1,0 +1,45 @@
+.About {
+  display: flex;
+  flex-flow: column;
+  align-items: right;
+  margin-top: 50px;
+  font-size: 22px;
+  max-width: 650px;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 270px;
+
+  &_header {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 40em;
+    white-space: nowrap;
+    overflow: hidden;
+
+    animation: type 1s steps(60, end);
+  }
+  &_picture {
+    width: 10%;
+
+    border-radius: 100%;
+    margin-right: 20px;
+    margin: 20px 20px 30px 0;
+  }
+  &_name {
+    font-weight: bold;
+    color: white;
+    font-size: 42px;
+  }
+  &_title {
+    font-weight: 500;
+  }
+  &_presentation {
+    font-size: 18px;
+  }
+  @keyframes type {
+    from {
+      width: 0;
+    }
+  }
+}

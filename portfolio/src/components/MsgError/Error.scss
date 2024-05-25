@@ -1,0 +1,41 @@
+.msgerror {
+  color: #caf3cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: first baseline;
+  font-weight: 500;
+
+  &_title {
+    font-size: 288px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      font-size: 96px;
+      margin-top: 87px;
+      margin-bottom: 107px;
+    }
+  }
+  &_text {
+    font-size: 36px;
+    margin-bottom: 100px;
+    text-align: center;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      padding: 0 50px;
+      margin-bottom: 50px;
+    }
+  }
+  &_link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 100px;
+    text-decoration: underline;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 114px;
+    }
+  }
+}

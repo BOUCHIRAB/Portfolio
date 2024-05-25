@@ -1,0 +1,28 @@
+@import "../../assets/variable.scss";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.form_contenair {
+  background-color: rgba(46, 125, 50, 0.3);
+  font-family: "Merriweather", sans-serif;
+  padding: 2em;
+  margin-top: 50px;
+}
+
+form {
+  text-align: center;
+  margin: 10px auto;
+  width: 600px;
+}
+
+.info_mail {
+  color: rgb(191, 187, 187);
+  font-size: 15px;
+  font-style: italic;
+}

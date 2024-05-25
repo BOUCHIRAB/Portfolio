@@ -1,0 +1,51 @@
+@import "../../assets/variable.scss";
+
+.contenairfooter {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 15px 30px;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  @media (max-width: 768px) {
+    padding: 0 0px 50px 0px;
+    margin-top: 0px;
+  }
+  &_text {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+
+    @media (max-width: 768px) {
+      font-size: 8px;
+      padding: 0 125px 0 125px;
+      text-align: center;
+    }
+  }
+  &_link {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+
+    a {
+      padding: 0 20px;
+    }
+    @media (max-width: 768px) {
+      font-size: 8px;
+      padding: 0 125px 0 125px;
+      text-align: center;
+    }
+  }
+
+  .button_cv {
+    background-color: white;
+    color: black;
+    font-weight: 800;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 25px;
+  }
+}
