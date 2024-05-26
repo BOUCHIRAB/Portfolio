@@ -59,11 +59,8 @@ function FormContact() {
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Message</Form.Label>
-            <Form.Control
-              type="textarea"
-              name="message"
-              style={{ height: "150px" }}
-            />
+
+            <Form.Control as="textarea" name="message" rows={6} />
           </Form.Group>
 
           <Button

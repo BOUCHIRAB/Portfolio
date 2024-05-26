@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Form from "react-bootstrap/Form"
 import { useForm } from "react-hook-form"
@@ -6,6 +5,9 @@ import "./FormAddWork.scss"
 import React, { useEffect, useMemo, useState } from "react"
 import * as PropTypes from "prop-types"
 import { addWork } from "../../lib/common"
+
+import SendIcon from "@mui/icons-material/Send"
+import Button from "@mui/material/Button"
 
 function FormAddWorks(work) {
   let [items, setitems] = useState([])
@@ -127,7 +129,15 @@ function FormAddWorks(work) {
           <Form.Control type="file" id={"file"} {...register("file")} />
           <div>{pictures}</div>
         </Form.Group>
-        <Button type="submit">Valider</Button>
+        <Button type="submit"></Button>{" "}
+        <Button
+          variant="contained"
+          color="success"
+          endIcon={<SendIcon />}
+          type="submit"
+        >
+          Valider
+        </Button>
       </div>
     </Form>
   )

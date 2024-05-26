@@ -6,8 +6,6 @@ import WorkDetails from "../../components/WorkDetails"
 import NameHeader from "../../components/NameHeader"
 import Button from "@mui/material/Button"
 import DeleteIcon from "@mui/icons-material/Delete"
-import "./Details.scss"
-import BtnReturn from "../../assets/return.png"
 
 function Details() {
   const { connectedUser, userLoading } = useUser()
@@ -61,19 +59,13 @@ function Details() {
             startIcon={<DeleteIcon />}
             size="small"
           >
-            {" "}
             Delete
           </Button>
-          <div className="work_contenair">
-            <img src={work.pictures} alt={work.picture}></img>
-            <WorkDetails work={work} />
-          </div>
-        </div>
-      ) : !workdelete ? (
-        <div className="work_contenair">
-          <img src={work.pictures}></img>
+
           <WorkDetails work={work} />
         </div>
+      ) : !workdelete ? (
+        <WorkDetails work={work} />
       ) : null
 
     const deletedContent = workdelete ? (
@@ -81,23 +73,21 @@ function Details() {
         <h1>Le projet {work.title}</h1>
         <p>a bien été supprimé</p>
         <Link to="/Works">
-          <button type="button">{"Retour"}</button>
+          <Button variant="contained" color="success" type="button">
+            Retour
+          </Button>
         </Link>
       </div>
     ) : null
 
     return (
-      <div>
+      <main class="test">
         <NameHeader />
-        <Link to={"/Works"}>
-          {" "}
-          <img src={BtnReturn} alt="icon return"></img>{" "}
-        </Link>
 
         {!loading ? loadingContent : null}
         <div>{workContent}</div>
         {workdelete ? deletedContent : null}
-      </div>
+      </main>
     )
   }
 }

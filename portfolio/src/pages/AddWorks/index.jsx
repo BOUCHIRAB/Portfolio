@@ -6,6 +6,8 @@ import { useUser } from "../../lib/customHooks"
 import { APP_ROUTES } from "../../utils/constants"
 
 import "./AddWorks.scss"
+import BtnReturn from "../../assets/return.png"
+import { Button } from "bootstrap"
 
 function AddWorks() {
   const navigate = useNavigate()
@@ -22,13 +24,18 @@ function AddWorks() {
   return (
     <div>
       {!created ? (
-        <FormAddWorks />
+        <div>
+          <Link to={"/Works"}>
+            <img src={BtnReturn} alt="icon return"></img>{" "}
+          </Link>
+          <FormAddWorks />
+        </div>
       ) : (
         <div>
           <h1>Nouveau projet ajouté</h1>
-          <Link to="/" className="button">
-            Retour à l&apos;accueil
-          </Link>
+          <Button>
+            <Link to="/">Retour à l&apos;accueil</Link>
+          </Button>
         </div>
       )}
     </div>

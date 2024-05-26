@@ -17,7 +17,7 @@ function ProgressSkills() {
               alt={content.title}
               className="logo_skill"
             ></img>
-            <ProgressBar now={content.score} />
+            <ProgressBar variant="success" now={content.score} />
           </div>
         ))}
       </div>
@@ -32,7 +32,7 @@ function ProgressSkills() {
               alt={content.title}
               className="logo_skill"
             ></img>
-            <ProgressBar now={content.score} />
+            <ProgressBar variant="success" now={content.score} />
           </div>
         ))}
       </div>
@@ -47,7 +47,7 @@ function ProgressSkills() {
               alt={content.title}
               className="logo_skill"
             ></img>
-            <ProgressBar animated="true" variant="info" now={content.score} />
+            <ProgressBar variant="success" now={content.score} />
           </div>
         ))}
       </div>

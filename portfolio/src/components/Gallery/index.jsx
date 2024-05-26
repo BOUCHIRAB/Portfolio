@@ -15,7 +15,7 @@ function Gallery() {
       works.map((work, i) => (
         <Carousel.Item className="work_card" key={i}>
           <Link to={`/Work/${work.id}`}>
-            <img src={work.pictures} alt="couv" className="work_img"></img>{" "}
+            <img src={work.pictures} alt="couv" className="gallery_img"></img>{" "}
           </Link>
 
           <Carousel.Caption>
@@ -42,7 +42,7 @@ function Gallery() {
 
   return (
     <main>
-      <h1 className="gallery_title">Mes réalisations</h1>
+      <h1>Mes réalisations</h1>
       <span>Cliquer sur un projet pour plus de détails</span>
       {tokenValue ? (
         <Link to="/Admin/" className="addwork">
