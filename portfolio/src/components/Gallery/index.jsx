@@ -15,7 +15,14 @@ function Gallery() {
       works.map((work, i) => (
         <Carousel.Item className="work_card" key={i}>
           <Link to={`/Work/${work.id}`}>
-            <img src={work.pictures} alt="couv" className="gallery_img"></img>{" "}
+            <img
+              src={work.pictures}
+              alt="project screenshot"
+              className="gallery_img"
+              loading="lazy"
+              width="1080px"
+              height="500"
+            ></img>
           </Link>
 
           <Carousel.Caption>

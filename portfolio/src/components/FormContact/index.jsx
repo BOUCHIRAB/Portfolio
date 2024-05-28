@@ -38,7 +38,6 @@ function FormContact() {
       <div className="form_contenair">
         <Form onSubmit={sendEmail}>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Nom </Form.Label>
             <Form.Control
               type="text"
               placeholder="Nom Prénom"

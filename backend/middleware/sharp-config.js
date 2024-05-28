@@ -5,7 +5,7 @@ const compressedImage = async (req, res, next) => {
   if (req.file) {
     sharp(req.file.path)
       .webp({ quality: 80 })
-      .resize(463)
+      .resize(1797)
       .toFile(req.file.path + ".webp")
       .then(() => {
         fs.unlink(req.file.path, () => {
@@ -18,7 +18,7 @@ const compressedImage = async (req, res, next) => {
         return next()
       })
   } else {
-  next()
+    next()
   }
 }
 

@@ -10,7 +10,7 @@ function Footer() {
         <a href="https://github.com/BOUCHIRAB">
           <img src={github} alt="logo gituhb"></img>{" "}
         </a>
-        <a href="https://github.com/BOUCHIRAB">
+        <a href="www.linkedin.com/in/ibtihaj-bouchirab">
           <img src={linkedin2} alt="logo linkedin"></img>{" "}
         </a>
         <a href="#" className="button_cv">

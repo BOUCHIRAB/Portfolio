@@ -3,11 +3,22 @@
 .work {
   display: flex;
   margin: 100px 0 250px 0;
+  align-items: center;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
 
   &_img {
     width: 30%;
+    height: 30%;
     padding-top: 30px;
+    @media (max-width: 768px) {
+      padding-top: 0px;
+    }
   }
   &_tools {
     background-color: #198754;
@@ -16,10 +27,16 @@
     padding: 5px;
     margin: 3px;
     border-radius: 8px;
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
   }
   &_title {
     font-size: 25px;
     padding-bottom: 10px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
   &_obj {
     font-size: 15px;
@@ -27,10 +44,37 @@
     font-weight: 300;
     max-width: 650px;
     padding: 20px 0;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
   }
   &_skills {
     font-size: 15px;
     font-style: normal;
     max-width: 600px;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.linkform {
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 15px;
+  &_git {
+    background-color: #e2ad0d;
+
+    padding: 5px;
+    margin: 3px;
+    border-radius: 8px;
+  }
+  &_web {
+    background-color: #0dcaf0;
+
+    padding: 5px;
+    margin: 3px;
+    border-radius: 8px;
   }
 }

@@ -24,12 +24,7 @@ function AddWorks() {
   return (
     <div>
       {!created ? (
-        <div>
-          <Link to={"/Works"}>
-            <img src={BtnReturn} alt="icon return"></img>{" "}
-          </Link>
-          <FormAddWorks />
-        </div>
+        <FormAddWorks />
       ) : (
         <div>
           <h1>Nouveau projet ajouté</h1>

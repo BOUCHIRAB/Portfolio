@@ -15,6 +15,9 @@ const StyledLink = styled(Link)`
   &:visited {
     text-decoration: underline;
   }
+  @media (max-width: 1024px) {
+    border-right: 0;
+  }
 `
 
 function Header({ user, setUser }) {
@@ -28,6 +31,10 @@ function Header({ user, setUser }) {
   return (
     <header>
       <nav className="navbar">
+        <label className="label_burger" for="toggle">
+          ☰
+        </label>
+        <input type="checkbox" id="toggle"></input>
         <div className="navbar_link">
           <StyledLink to="/">Accueil</StyledLink>
           <StyledLink to="/Skills/">Compétences</StyledLink>
@@ -35,12 +42,13 @@ function Header({ user, setUser }) {
           <StyledLink to="/Contact/">Contact</StyledLink>
         </div>
         {!user ? (
-          <Link to="/Login">
-            {" "}
-            <Button variant="contained" color="success">
-              Sign In
-            </Button>
-          </Link>
+          <span className="login_btn">
+            <Link to="/Login">
+              <Button variant="contained" color="success">
+                Sign In
+              </Button>
+            </Link>
+          </span>
         ) : (
           <span
             tabIndex={0}

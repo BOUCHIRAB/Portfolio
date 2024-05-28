@@ -6,21 +6,17 @@
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
-  /*  background: #656765;*/
-  /*background: #198754;*/
   padding: 20px;
   background: #444;
   background: linear-gradient(#555, #2c2c2c);
-
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 -1px 0 rgba(255, 255, 255, 0.4);
   color: white;
   border: none;
-
   border-radius: 5px;
 }
 
 @mixin mq768 {
-  font-size: 13px;
+  font-size: 15px;
   padding: 7px 15px 7px 15px;
 }
 
@@ -90,6 +86,7 @@
     & > span {
       display: block;
       padding-top: 20px;
+      font-size: 15px;
     }
   }
   .collapse_close > span {

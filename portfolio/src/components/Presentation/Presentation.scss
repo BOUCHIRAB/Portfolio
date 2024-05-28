@@ -3,21 +3,20 @@
   flex-flow: column;
   align-items: right;
   margin-top: 50px;
-
-  width: 550px;
   max-width: 550px;
   width: 100%;
   margin-top: 150px;
   margin-bottom: 270px;
 
   &_header {
+    height: 100px;
     display: flex;
     flex-flow: row;
     align-items: center;
     width: 40em;
+
     white-space: nowrap;
     overflow: hidden;
-
     animation: type 1s steps(60, end);
   }
   &_picture {
@@ -25,19 +24,31 @@
     border-radius: 100%;
     margin-right: 20px;
     margin: 20px 20px 30px 0;
+    @media (max-width: 768px) {
+      width: 5%;
+    }
   }
   &_name {
     font-weight: bold;
     color: white;
     font-size: 35px;
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
   }
   &_title {
     font-weight: 500;
     font-size: 25px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
   &_presentation {
     font-size: 15px;
     width: 550px;
+    @media (max-width: 768px) {
+      width: 95%;
+    }
   }
   @keyframes type {
     from {

@@ -6,7 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  padding: 30px 30px;
+  padding: 25px 25px;
   width: 100%;
   margin-top: 20px;
 
@@ -15,8 +15,8 @@
   left: 0;
   right: 0;
   @media (max-width: 768px) {
-    padding: 0 0px 50px 0px;
-    margin-top: 0px;
+    flex-direction: column;
+    align-items: center;
   }
   &_text {
     color: white;
@@ -24,9 +24,8 @@
     font-weight: 300;
 
     @media (max-width: 768px) {
-      font-size: 8px;
-      padding: 0 125px 0 125px;
-      text-align: center;
+      font-size: 12px;
+      padding-top: 10px;
     }
   }
   &_link {
@@ -37,11 +36,6 @@
     a {
       padding: 0 20px;
     }
-    @media (max-width: 768px) {
-      font-size: 8px;
-      padding: 0 125px 0 125px;
-      text-align: center;
-    }
   }
 
   .button_cv {
@@ -51,5 +45,7 @@
     border-radius: 100%;
     padding: 5px;
     margin: 25px;
+    @media (max-width: 768px) {
+    }
   }
 }

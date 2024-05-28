@@ -91,6 +91,8 @@ export async function addWork(data) {
     skills: data.skills,
     tools: data.tools,
     pictures: data.img,
+    repo: data.repo,
+    website: data.website,
   }
 
   //console.log(data.file0[0])

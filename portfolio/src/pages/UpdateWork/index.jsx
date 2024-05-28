@@ -2,14 +2,10 @@ import React, { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import FormAddWork from "../../components/FormAddWork"
 import { getWork } from "../../lib/common"
-//import { APP_ROUTES } from "../../utils/constants"
-//import { useUser } from "../../lib/customHooks"
 
 function UpdateWork() {
   const [work, setWork] = useState(null)
   const params = useParams()
-  //const navigate = useNavigate()
-  // const { connectedUser, auth, userLoading } = useUser()
   const [created, setCreated] = useState(false)
 
   useEffect(() => {

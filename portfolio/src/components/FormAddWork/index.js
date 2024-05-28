@@ -9,11 +9,10 @@ import { addWork } from "../../lib/common"
 import SendIcon from "@mui/icons-material/Send"
 import Button from "@mui/material/Button"
 
+import { Link } from "react-router-dom"
+import BtnReturn from "../../assets/return.png"
+
 function FormAddWorks(work) {
-  let [items, setitems] = useState([])
-  let [nbitems, setnbitems] = useState(0)
-  let [pictures, setpictures] = useState([])
-  let [nbpictures, setnbpictures] = useState(0)
   const { register, handleSubmit, reset } = useForm({
     defaultValues: useMemo(
       () => ({
@@ -21,6 +20,8 @@ function FormAddWorks(work) {
         obj: work?.obj,
         skills: work?.skills,
         tools: work?.tools,
+        repo: work?.repo,
+        website: work?.website,
       }),
       [work]
     ),
@@ -41,105 +42,70 @@ function FormAddWorks(work) {
   }
 
   return (
-    <Form className="form_addwork" onSubmit={handleSubmit(onSubmit)}>
-      <h1>Ajouter un Projet</h1>
-      <div>
-        <input type="hidden" name="id" {...register("id")} />
-        <Form.Group className="mb-3">
-          <Form.Label>Titre</Form.Label>
-          <Form.Control
-            type="text"
-            id="title"
-            {...register("title")}
-            placeholder="Titre du projet"
-          />
-          <Form.Label>Objectifs</Form.Label>
-          <Form.Control
-            as="textarea"
-            name="obj"
-            {...register("obj")}
-            rows={2}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Competences déployées</Form.Label>
-          <Form.Control
-            as="textarea"
-            name="skills"
-            {...register("skills")}
-            rows={4}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>
-            Outils/Langages
-            <Button
-              id="toggle-check"
-              variant="secondary"
-              onClick={() => {
-                let count = items.push(
-                  <Form.Control
-                    key={nbitems}
-                    type="text"
-                    name={`tools${nbitems}`}
-                    {...register(`tools${nbitems}`)}
-                    placeholder="Html, CSS..."
-                  />
-                )
-                setitems(items)
-                setnbitems(count + 1)
-                console.log(count)
-              }}
-            >
-              Ajouter
-            </Button>
-          </Form.Label>
-          <Form.Control
-            type="text"
-            name="tools"
-            {...register("tools")}
-            placeholder="Html, CSS..."
-          />
-          <Form.Group>
-            <div>{items}</div>
-          </Form.Group>
+    <section className="addwork_contenair">
+      <Link to={"/Works"}>
+        <img src={BtnReturn} alt="icon return"></img>{" "}
+      </Link>
 
-          <Form.Label>
-            Ajouter une image
-            <Button
-              id="toggle-check"
-              variant="secondary"
-              onClick={() => {
-                let count = pictures.push(
-                  <Form.Control
-                    key={nbpictures}
-                    type="file"
-                    id={`img${nbpictures}`}
-                    {...register(`file${nbpictures}`)}
-                  />
-                )
-                setpictures(pictures)
-                setnbpictures(count)
-                console.log(count)
-              }}
-            >
-              Ajouter
-            </Button>
-          </Form.Label>
-          <Form.Control type="file" id={"file"} {...register("file")} />
-          <div>{pictures}</div>
-        </Form.Group>
-        <Button type="submit"></Button>{" "}
-        <Button
-          variant="contained"
-          color="success"
-          endIcon={<SendIcon />}
-          type="submit"
-        >
-          Valider
-        </Button>
-      </div>
-    </Form>
+      <Form className="form_addwork" onSubmit={handleSubmit(onSubmit)}>
+        <h1> Ajouter un Projet</h1>
+        <div>
+          <input type="hidden" name="id" {...register("id")} />
+          <Form.Group className="mb-3">
+            <Form.Label>Titre</Form.Label>
+            <Form.Control
+              type="text"
+              id="title"
+              {...register("title")}
+              placeholder="Titre du projet"
+            />
+            <Form.Label>Objectifs</Form.Label>
+            <Form.Control
+              as="textarea"
+              name="obj"
+              {...register("obj")}
+              rows={2}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Competences déployées</Form.Label>
+            <Form.Control
+              as="textarea"
+              name="skills"
+              {...register("skills")}
+              rows={3}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Outils/Langages</Form.Label>
+            <Form.Control
+              type="text"
+              name="tools"
+              {...register("tools")}
+              placeholder="Html, CSS..."
+            />
+
+            <Form.Label>Lien repository Github</Form.Label>
+            <Form.Control type="text" name="repo" {...register("repo")} />
+
+            <Form.Label>Lien vers le site</Form.Label>
+            <Form.Control type="text" name="website" {...register("website")} />
+
+            <Form.Label>Ajouter une image</Form.Label>
+            <Form.Control type="file" id={"file"} {...register("file")} />
+          </Form.Group>
+          <Button type="submit"></Button>{" "}
+          <Button
+            variant="contained"
+            color="success"
+            endIcon={<SendIcon />}
+            type="submit"
+          >
+            Valider
+          </Button>
+        </div>
+      </Form>
+    </section>
   )
 }
 
@@ -153,6 +119,8 @@ FormAddWorks.propTypes = {
     skills: PropTypes.string,
     tools: PropTypes.string,
     pictures: PropTypes.string,
+    repo: PropTypes.string,
+    website: PropTypes.string,
   }),
 }
 

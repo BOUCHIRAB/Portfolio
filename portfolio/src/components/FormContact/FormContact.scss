@@ -10,15 +10,23 @@
 }
 .form_contenair {
   background-color: rgba(46, 125, 50, 0.3);
-  font-family: "Merriweather", sans-serif;
+
   padding: 2em;
   margin-top: 50px;
+  @media (max-width: 768px) {
+    padding: 1em;
+    font-size: 18px;
+    width: 100%;
+  }
 }
 
 form {
   text-align: center;
   margin: 10px auto;
   width: 600px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 
 .info_mail {
