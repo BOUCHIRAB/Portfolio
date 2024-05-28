@@ -21,6 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "homepage": "https://bouchirab.github.io/Portfolio/portfolio"
+  "background_color": "#ffffff"
 }

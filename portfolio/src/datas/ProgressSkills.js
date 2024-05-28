@@ -1,34 +1,51 @@
+import HTML from "./../assets/logos/html.png"
+import CSS from "./../assets/logos/css.png"
+import JAVASCRIPT from "./../assets/logos/js.png"
+import REACT from "./../assets/logos/react.png"
+import SASS from "./../assets/logos/sass.png"
+import FIGMA from "./../assets/logos/figma.png"
+import NODE from "./../assets/logos/Node.png"
+import MONGO from "./../assets/logos/mongodb.png"
+import EXPRESS from "./../assets/logos/Express.png"
+import PHP from "./../assets/logos/PHP.png"
+import MYSQL from "./../assets/logos/mysql.png"
+import GITHUB from "./../assets/logos/github.png"
+import VSCODE from "./../assets/logos/vscode.png"
+import NOTION from "./../assets/logos/notion.png"
+import WAKELET from "./../assets/logos/wakelet.jpg"
+import POSTMAN from "./../assets/logos/postman.png"
+
 export const ListProgressSkills = [
   {
     FrontSkills: [
       {
         title: "Html",
-        picture: "http://localhost:4000/images/html.png",
+        picture: HTML,
         score: "95",
       },
       {
         title: "CSS",
-        picture: "http://localhost:4000/images/css.png",
+        picture: CSS,
         score: "95",
       },
       {
         title: "Javascript",
-        picture: "http://localhost:4000/images/js.png",
+        picture: JAVASCRIPT,
         score: "90",
       },
       {
         title: "React",
-        picture: "http://localhost:4000/images/react.png",
+        picture: REACT,
         score: "90",
       },
       {
         title: "SASS",
-        picture: "http://localhost:4000/images/sass.png",
+        picture: SASS,
         score: "95",
       },
       {
         title: "Figma",
-        picture: "http://localhost:4000/images/figma.png",
+        picture: FIGMA,
         score: "60",
       },
     ],
@@ -36,27 +53,27 @@ export const ListProgressSkills = [
     BackSkills: [
       {
         title: "Node",
-        picture: "http://localhost:4000/images/Node.png",
+        picture: NODE,
         score: "70",
       },
       {
         title: "MongoDB",
-        picture: "http://localhost:4000/images/mongodb.png",
+        picture: MONGO,
         score: "70",
       },
       {
         title: "Express",
-        picture: "http://localhost:4000/images/Express.png",
+        picture: EXPRESS,
         score: "70",
       },
       {
         title: "PHP",
-        picture: "http://localhost:4000/images/PHP.png",
+        picture: PHP,
         score: "30",
       },
       {
         title: "MySQL",
-        picture: "http://localhost:4000/images/mysql.png",
+        picture: MYSQL,
         score: "60",
       },
     ],
@@ -64,27 +81,27 @@ export const ListProgressSkills = [
     OtherSkills: [
       {
         title: "Git/Github",
-        picture: "http://localhost:4000/images/github.png",
+        picture: GITHUB,
         score: "80",
       },
       {
         title: "Visual Studio",
-        picture: "http://localhost:4000/images/vscode.png",
+        picture: VSCODE,
         score: "90",
       },
       {
         title: "Notion",
-        picture: "http://localhost:4000/images/notion.png",
+        picture: NOTION,
         score: "80",
       },
       {
         title: "Wakelet",
-        picture: "http://localhost:4000/images/wakelet.jpg",
+        picture: WAKELET,
         score: "80",
       },
       {
         title: "Postman",
-        picture: "http://localhost:4000/images/postman.png",
+        picture: POSTMAN,
         score: "70",
       },
     ],
