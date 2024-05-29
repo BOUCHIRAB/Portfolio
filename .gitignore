@@ -1,3 +1,6 @@
 .idea
 .git
 .vscode
+
+# Local Netlify folder
+.netlify
