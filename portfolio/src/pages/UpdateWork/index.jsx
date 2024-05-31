@@ -22,8 +22,7 @@ function UpdateWork() {
       <div>
         {!created ? (
           <>
-            {" "}
-            <h1>Modifier le projet</h1>
+            <h2>Modifier le projet</h2>
             <FormAddWork work={work} validate={setCreated} />{" "}
           </>
         ) : (

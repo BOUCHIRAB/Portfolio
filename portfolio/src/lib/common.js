@@ -82,8 +82,6 @@ export async function deleteWork(id) {
 
 export async function addWork(data) {
   const userId = localStorage.getItem("userId")
-  console.log(data)
-
   const work = {
     userId,
     title: data.title,
@@ -95,12 +93,10 @@ export async function addWork(data) {
     website: data.website,
   }
 
-  //console.log(data.file0[0])
-
   const bodyFormData = new FormData()
   bodyFormData.append("work", JSON.stringify(work))
   bodyFormData.append("image", data.file[0])
-  console.log(bodyFormData)
+  console.log(data.file[0])
   try {
     return await axios({
       method: "post",
@@ -126,16 +122,14 @@ export async function updateWork(data, id) {
     obj: data.obj,
     skills: data.skills,
     tools: data.tools,
-    // pictures: data.img1,
   }
-  console.log(work)
+
   if (data.file[0]) {
     newData = new FormData()
     newData.append("work", JSON.stringify(work))
     newData.append("image", data.file[0])
   } else {
     newData = { ...work }
-    console.log(newData)
   }
 
   try {

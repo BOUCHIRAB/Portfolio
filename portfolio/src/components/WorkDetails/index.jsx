@@ -15,14 +15,14 @@ function WorkDetails({ work }) {
   ))
   const repo = work.repo ? (
     <span className="linkform_git">
-      <img src={Git} alt="github icon"></img>
+      <img src={Git} width="25" height="25" alt="github icon"></img>
       <a href={work.repo}> Repository</a>
     </span>
   ) : null
 
   const website = work.website ? (
     <span className="linkform_web">
-      <img src={Web} alt="website icon"></img>
+      <img src={Web} width="15" height="15" alt="website icon"></img>
       <a href={work.website}> Visiter le site</a>
     </span>
   ) : null
@@ -35,28 +35,31 @@ function WorkDetails({ work }) {
   ))
 
   return (
-    <div>
+    <section className="work_details">
       <Link to={"/Works"}>
-        <img src={BtnReturn} alt="icon return"></img>{" "}
+        <img src={BtnReturn} width="35" height="35" alt="icon return"></img>{" "}
       </Link>
       <div className="work">
         <img
           src={work.pictures}
           alt="project screenshot"
           className="work_img"
+          fetchpriority="high"
+          width="350"
+          height="250"
         ></img>
         <div>
           <h1 className="work_title">{work.title}</h1>
-          <p>{tool}</p>
-          <h2 className="work_obj">Objectif du projet : {work.obj}</h2>
-          Compétences déployées : {skill}
+          <div className="tools_contenair">{tool}</div>
+          <div className="work_obj">Objectif du projet : {work.obj}</div>
+          Compétences déployées : <ul>{skill}</ul>
           <div className="linkform">
             {repo}
             {website}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -5,6 +5,8 @@ import { getWorks } from "../../lib/common"
 import "./Gallery.scss"
 import { Link } from "react-router-dom"
 import Carousel from "react-bootstrap/Carousel"
+import CircularProgress from "@mui/material/CircularProgress"
+import Box from "@mui/material/Box"
 
 function Gallery() {
   const [works, setworks] = useState(null)
@@ -19,17 +21,14 @@ function Gallery() {
               src={work.pictures}
               alt="project screenshot"
               className="gallery_img"
-              loading="lazy"
-              width="1080px"
-              height="500"
             ></img>
-          </Link>
 
-          <Carousel.Caption>
-            <div className="label_work">
-              <span>{work.title}</span>
-            </div>
-          </Carousel.Caption>
+            <Carousel.Caption>
+              <div className="label_work">
+                <span>{work.title}</span>
+              </div>
+            </Carousel.Caption>
+          </Link>
         </Carousel.Item>
       ))
     ) : (
@@ -49,7 +48,7 @@ function Gallery() {
 
   return (
     <main>
-      <h1>Mes réalisations</h1>
+      <h2>Mes réalisations</h2>
       <span>Cliquer sur un projet pour plus de détails</span>
       {tokenValue ? (
         <Link to="/Admin/" className="addwork">
@@ -58,7 +57,9 @@ function Gallery() {
         </Link>
       ) : null}
       {loading ? (
-        <h1>Chargement</h1>
+        <Box sx={{ display: "flex" }}>
+          <CircularProgress color="success" />
+        </Box>
       ) : (
         <Carousel className="gallery">{displayWorks()}</Carousel>
       )}

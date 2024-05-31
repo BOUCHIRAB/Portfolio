@@ -15,7 +15,7 @@ function FormContact() {
       user_mail: document.querySelector("[name=user_email]").value,
       message: document.querySelector("[name=message]").value,
     }
-    console.log(data)
+
     emailjs
       .send("service_bdt6nub", "template_dvksbdb", data)
 
@@ -34,10 +34,11 @@ function FormContact() {
 
   return (
     <section className="contact">
-      <h1>Me contacter</h1>
+      <h2>Me contacter</h2>
       <div className="form_contenair">
         <Form onSubmit={sendEmail}>
           <Form.Group className="mb-3" controlId="formBasicPassword">
+            <span>Nom Prénom</span>
             <Form.Control
               type="text"
               placeholder="Nom Prénom"
@@ -45,17 +46,16 @@ function FormContact() {
             />
           </Form.Group>
 
+          <br></br>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Adress Mail</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Label>Adresse email</Form.Label>
+            <Form.Control type="email" placeholder="Adresse email" />
+
             <Form.Text className="text-muted" name="user_email">
-              <span className="info_mail">
-                {" "}
-                Votre mail ne sera pas partagé.
-              </span>
+              <span className="info_mail">Votre mail ne sera pas partagé.</span>
             </Form.Text>
           </Form.Group>
-
+          <br></br>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Message</Form.Label>
 

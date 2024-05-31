@@ -85,7 +85,7 @@ export const ListProgressSkills = [
         score: "80",
       },
       {
-        title: "Visual Studio",
+        title: "VSCode",
         picture: VSCODE,
         score: "90",
       },

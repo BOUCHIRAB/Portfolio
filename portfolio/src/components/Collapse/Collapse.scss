@@ -17,7 +17,7 @@
 
 @mixin mq768 {
   font-size: 15px;
-  padding: 7px 15px 7px 15px;
+  padding: 7px 5px 7px 8px;
 }
 
 @mixin animnopen {
@@ -47,7 +47,7 @@
   }
   &_up,
   &_down {
-    padding-left: 32px;
+    padding-left: 10px;
     padding-right: 32px;
     transition: transform 150ms;
     &:active {
@@ -83,13 +83,17 @@
     transition: 0.5s;
     opacity: 1;
     background-color: rgb(248, 248, 248);
-    & > span {
+    & > li {
       display: block;
-      padding-top: 20px;
+      padding: 20px 10px 5px 0;
       font-size: 15px;
+      font-weight: 400;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
   }
-  .collapse_close > span {
+  .collapse_close > li {
     transition: 0.5s;
     display: none;
   }

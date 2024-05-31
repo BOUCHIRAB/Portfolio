@@ -1,8 +1,7 @@
 import React from "react"
 import "./Presentation.scss"
-import Button from "@mui/material/Button"
-
 import IB from "../../assets/IB.webp"
+import { Link } from "react-router-dom"
 
 function Presentation() {
   return (
@@ -21,9 +20,9 @@ function Presentation() {
         mes compétences vers de nouveaux défis et contribuer au succès de
         projets innovants.
       </div>
-      <Button variant="outlined" color="success">
-        Contact
-      </Button>
+      <button className="About_btn">
+        <Link to={"/Contact"}>CONTACT</Link>
+      </button>
     </div>
   )
 }

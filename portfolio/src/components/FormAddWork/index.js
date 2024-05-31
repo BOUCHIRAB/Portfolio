@@ -48,7 +48,7 @@ function FormAddWorks(work) {
       </Link>
 
       <Form className="form_addwork" onSubmit={handleSubmit(onSubmit)}>
-        <h1> Ajouter un Projet</h1>
+        <h2> Ajouter un Projet</h2>
         <div>
           <input type="hidden" name="id" {...register("id")} />
           <Form.Group className="mb-3">

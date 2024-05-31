@@ -4,12 +4,12 @@ import "./Header.scss"
 import styled from "styled-components"
 import * as PropTypes from "prop-types"
 import Button from "@mui/material/Button"
+import { useState } from "react"
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
   border-right: 1px solid white;
-  padding-right: 15px;
   padding: 3px 15px 0px 15px;
   &:hover,
   &:visited {
@@ -17,6 +17,7 @@ const StyledLink = styled(Link)`
   }
   @media (max-width: 1024px) {
     border-right: 0;
+    padding: 0px 15px 20px 15px;
   }
 `
 
@@ -28,17 +29,23 @@ function Header({ user, setUser }) {
     navigate("/")
   }
 
+  const [isOpen, setIsOpen] = useState("false")
+  const [menu, setmenu] = useState("navbar_link")
+
   return (
     <header>
       <nav className="navbar">
-        <label className="label_burger" for="toggle">
+        <div className="label_burger" onClick={() => setIsOpen(!isOpen)}>
           ☰
-        </label>
-        <input type="checkbox" id="toggle"></input>
-        <div className="navbar_link">
+        </div>
+
+        <div
+          className={isOpen ? "navbar_link" : "close_burger"}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <StyledLink to="/">Accueil</StyledLink>
           <StyledLink to="/Skills/">Compétences</StyledLink>
-          <StyledLink to="/Works">Mes projets</StyledLink>
+          <StyledLink to="/Works">Mes réalisations</StyledLink>
           <StyledLink to="/Contact/">Contact</StyledLink>
         </div>
         {!user ? (

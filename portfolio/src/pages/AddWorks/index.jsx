@@ -27,7 +27,7 @@ function AddWorks() {
         <FormAddWorks />
       ) : (
         <div>
-          <h1>Nouveau projet ajouté</h1>
+          <h2>Nouveau projet ajouté</h2>
           <Button>
             <Link to="/">Retour à l&apos;accueil</Link>
           </Button>

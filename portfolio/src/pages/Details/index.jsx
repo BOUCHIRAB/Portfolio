@@ -70,7 +70,7 @@ function Details() {
 
     const deletedContent = workdelete ? (
       <div>
-        <h1>Le projet {work.title}</h1>
+        <h2>Le projet {work.title}</h2>
         <p>a bien été supprimé</p>
         <Link to="/Works">
           <Button variant="contained" color="success" type="button">
@@ -81,7 +81,7 @@ function Details() {
     ) : null
 
     return (
-      <main class="test">
+      <main>
         <NameHeader />
 
         {!loading ? loadingContent : null}

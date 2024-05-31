@@ -8,11 +8,9 @@ import Uarrow from "../../assets/up_arrow.png"
 
 function Skills() {
   return (
-    <main>
+    <main id="ancre_progress">
       <NameHeader />
-      <h1 className="page_title" id="ancre_progress">
-        Mes Compétences
-      </h1>
+      <h1 className="page_title">Mes Compétences</h1>
       <ProgressSkills />
       Détails
       <a href="#ancre_globalskills">

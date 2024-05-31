@@ -2,12 +2,13 @@ import { SkillsList } from "../../datas/GlobalSkills"
 import "./GlobalSkills.scss"
 import React from "react"
 import Collapse from "../Collapse"
+import Uarrow from "../../assets/up_arrow.png"
 
 function GlobalSkills() {
   return (
     <article>
-      <div className="skills" id="ancre_globalskills">
-        <div className="skills_category">
+      <div className="gskills" id="ancre_globalskills">
+        <div className="gskills_category">
           Compétences techniques
           {SkillsList[0].HardSkills.map((content, i) => (
             <Collapse
@@ -21,7 +22,7 @@ function GlobalSkills() {
             />
           ))}
         </div>
-        <div className="skills_category">
+        <div className="gskills_category">
           Compétences transversales
           {SkillsList[0].OtherSkills.map((content, i) => (
             <Collapse
@@ -36,6 +37,9 @@ function GlobalSkills() {
           ))}
         </div>
       </div>
+      <a href="#ancre_progress">
+        <img src={Uarrow} alt="UP arrow icon"></img>
+      </a>
     </article>
   )
 }

@@ -9,30 +9,34 @@ function Collapse({ contenttitle, contenttext }) {
 
   return isOpen ? (
     <ul className="coll">
-      <div key={contenttitle.index} className="skills_collapse">
-        <span>{contenttitle}</span>
-        <a href="##" onClick={() => setIsOpen(!isOpen)} className="collapse_up">
+      <li key={contenttitle.index} className="skills_collapse">
+        <span id={`anchor${contenttitle}`}>{contenttitle}</span>
+        <a
+          href={`#anchor${contenttitle}`}
+          onClick={() => setIsOpen(!isOpen)}
+          className="coll_up"
+        >
           <img src={vector} alt="vector"></img>
         </a>
-      </div>
+      </li>
       <ul key={contenttext.index} className="collapse_open">
-        <span>{contenttext}</span>
+        <li>{contenttext}</li>
       </ul>
     </ul>
   ) : (
     <ul className="coll">
-      <div key={contenttitle.index} className="skills_collapse">
-        <span>{contenttitle}</span>
+      <li key={contenttitle.index} className="skills_collapse">
+        <span id={`anchor${contenttitle}`}>{contenttitle}</span>
         <a
-          href="##"
-          className="collapse_down"
+          href={`#anchor${contenttitle}`}
+          className="coll_down"
           onClick={() => setIsOpen(!isOpen)}
         >
           <img src={vector} alt="vector"></img>
         </a>
-      </div>
+      </li>
       <ul key={contenttext.index} className="collapse_close">
-        <span>{contenttext}</span>
+        <li>{contenttext}</li>
       </ul>
     </ul>
   )

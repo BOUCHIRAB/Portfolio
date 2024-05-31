@@ -8,12 +8,12 @@ function Footer() {
     <footer className="contenairfooter">
       <div className="contenairfooter_link">
         <a href="https://github.com/BOUCHIRAB">
-          <img src={github} alt="logo gituhb"></img>{" "}
+          <img src={github} width="30" height="30" alt="logo gituhb"></img>{" "}
         </a>
         <a href="www.linkedin.com/in/ibtihaj-bouchirab">
-          <img src={linkedin2} alt="logo linkedin"></img>{" "}
+          <img src={linkedin2} width="30" height="30" alt="logo linkedin"></img>{" "}
         </a>
-        <a href="#" className="button_cv">
+        <a href="https://cvdesignr.com/p/6640f2f2dc570" className="button_cv">
           CV
         </a>
       </div>

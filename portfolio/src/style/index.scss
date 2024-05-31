@@ -1,12 +1,64 @@
+/* kaushan-script-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/kaushan-script-v18-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* work-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/work-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-300 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/inter-v13-latin-300.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/inter-v13-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-800 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/inter-v13-latin-800.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 body {
   display: flex;
   justify-content: center;
   margin-top: 100px;
-
+  font-family: "Inter";
   background-position: center;
   background-size: cover;
   background-color: black;
-  background-image: url("../assets/bckg1.webp");
+  background-image: url("../assets/bckg1-min.webp");
   background-size: 105vw auto;
   /*background-size: 105vw auto;*/
   background-position: 0% 0%;
@@ -14,6 +66,9 @@ body {
   width: 100vw;
   animation: horizontalMove 40s infinite;
   animation-timing-function: ease;
+  @media (max-width: 768px) {
+    background-size: auto;
+  }
 }
 
 @keyframes horizontalMove {
@@ -43,13 +98,6 @@ main {
   }
 }
 
-header {
-  padding: 20px 20px 0px 30px;
-  width: 100%;
-
-  @media (max-width: 768px) {
-  }
-}
 #root {
   display: flex;
   flex-direction: column;
@@ -66,5 +114,10 @@ header {
   .page_title {
     margin-top: 50px;
     margin-bottom: 50px;
+  }
+  h2 {
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 }

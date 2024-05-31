@@ -6,12 +6,12 @@ import { ListProgressSkills } from "../../datas/ProgressSkills"
 
 function ProgressSkills() {
   return (
-    <div className="skills">
+    <article className="skills">
       <div className="skills_category">
         <span>FrontEnd</span>
         {ListProgressSkills[0].FrontSkills.map((content, i) => (
-          <div className="skills_details">
-            <div key={i} className="skills_category_item">
+          <div key={i} className="skills_details">
+            <div className="skills_category_item">
               {content.title}
               <img
                 src={content.picture}
@@ -21,6 +21,7 @@ function ProgressSkills() {
             </div>
 
             <ProgressBar
+              aria-label={`Level ${content.score}%`}
               className="skills_bar"
               variant="success"
               now={content.score}
@@ -32,8 +33,8 @@ function ProgressSkills() {
       <div className="skills_category">
         <span>Backend</span>
         {ListProgressSkills[0].BackSkills.map((content, i) => (
-          <div className="skills_details">
-            <div key={i} className="skills_category_item">
+          <div key={i} className="skills_details">
+            <div className="skills_category_item">
               {content.title}
               <img
                 src={content.picture}
@@ -54,8 +55,8 @@ function ProgressSkills() {
       <div className="skills_category">
         <span> Autres Outils</span>
         {ListProgressSkills[0].OtherSkills.map((content, i) => (
-          <div className="skills_details">
-            <div key={i} className="skills_category_item">
+          <div key={i} className="skills_details">
+            <div className="skills_category_item">
               {content.title}
               <img
                 src={content.picture}
@@ -72,7 +73,7 @@ function ProgressSkills() {
           </div>
         ))}
       </div>
-    </div>
+    </article>
   )
 }
 

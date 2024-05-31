@@ -6,22 +6,56 @@ header {
   justify-content: end;
   background-color: black;
   position: fixed;
+  padding: 20px 20px 0px 30px;
   top: 0;
   left: 0;
   right: 0;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 
 .navbar {
   margin: 0px 20px 20px 0px;
 
   &_link {
-    font-size: 18px;
     font-weight: 500;
     display: flex;
     flex-direction: row;
     text-align: center;
-    padding-right: 15px;
+    padding: 15px 0;
     gap: 27px;
+    @media (max-width: 1024px) {
+      position: absolute;
+      gap: 20px;
+    }
+  }
+}
+
+.close_burger {
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 15px 0;
+  gap: 27px;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+
+    background: #48435c;
+    font-size: 12px;
+    height: 180px;
+    width: 100px;
+    margin-right: 300px;
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    padding: 0;
+    padding: 15px 0;
+    gap: 2px;
   }
 }
 
@@ -29,35 +63,24 @@ header {
   display: none;
 }
 
-#toggle {
-  display: none;
-}
-
 @media (max-width: 1024px) {
   .navbar {
-    height: 60px;
+    width: 200px;
+    display: flex;
+    align-items: end;
 
     &_link {
       display: none;
-      flex-direction: column;
-      background: #48435c;
-      font-size: 12px;
-      height: 220px;
     }
   }
   .label_burger {
-    width: 30px;
+    width: 100px;
+    height: 60px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-  }
 
-  #toggle:checked + .navbar_link {
-    display: flex;
+    font-size: 40px;
+
+    cursor: pointer;
   }
 
   .login_btn {

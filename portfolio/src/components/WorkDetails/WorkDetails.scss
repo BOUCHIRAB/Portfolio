@@ -1,20 +1,27 @@
 @import "../../assets/variable.scss";
-
+.work_details {
+  margin-top: 80px;
+  margin-bottom: 200px;
+  margin: 80px 10px 200px 10px;
+  display: flex;
+  @media (max-width: 1024px) {
+    flex-flow: column wrap;
+    margin: 50px 20px 200px 30px;
+  }
+}
 .work {
   display: flex;
-  margin: 100px 0 250px 0;
+  margin: 0px 0 250px 0;
   align-items: center;
   justify-content: center;
 
   @media (max-width: 1024px) {
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
     margin: 10px;
   }
 
   &_img {
-    width: 30%;
-    height: 30%;
     padding-top: 30px;
     @media (max-width: 768px) {
       padding-top: 0px;
@@ -30,6 +37,10 @@
     @media (max-width: 768px) {
       font-size: 10px;
     }
+  }
+  .tools_contenair {
+    display: flex;
+    flex-flow: row wrap;
   }
   &_title {
     font-size: 25px;
@@ -52,6 +63,7 @@
     font-size: 15px;
     font-style: normal;
     max-width: 600px;
+    color: white;
     @media (max-width: 768px) {
       font-size: 12px;
     }
