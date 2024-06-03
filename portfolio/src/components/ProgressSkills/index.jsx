@@ -1,6 +1,5 @@
 import React from "react"
-import ProgressBar from "react-bootstrap/ProgressBar"
-
+import ProgressBar from "../../components/ProgressBar"
 import "./ProgressSkills.scss"
 import { ListProgressSkills } from "../../datas/ProgressSkills"
 
@@ -23,8 +22,7 @@ function ProgressSkills() {
             <ProgressBar
               aria-label={`Level ${content.score}%`}
               className="skills_bar"
-              variant="success"
-              now={content.score}
+              completed={content.score}
             />
           </div>
         ))}
@@ -44,9 +42,9 @@ function ProgressSkills() {
             </div>
 
             <ProgressBar
+              aria-label={`Level ${content.score}%`}
               className="skills_bar"
-              variant="success"
-              now={content.score}
+              completed={content.score}
             />
           </div>
         ))}
@@ -66,9 +64,9 @@ function ProgressSkills() {
             </div>
 
             <ProgressBar
+              aria-label={`Level ${content.score}%`}
               className="skills_bar"
-              variant="success"
-              now={content.score}
+              completed={content.score}
             />
           </div>
         ))}

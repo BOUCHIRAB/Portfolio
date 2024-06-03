@@ -30,7 +30,6 @@ function Header({ user, setUser }) {
   }
 
   const [isOpen, setIsOpen] = useState("false")
-  const [menu, setmenu] = useState("navbar_link")
 
   return (
     <header>
@@ -47,27 +46,29 @@ function Header({ user, setUser }) {
           <StyledLink to="/Skills/">Compétences</StyledLink>
           <StyledLink to="/Works">Mes réalisations</StyledLink>
           <StyledLink to="/Contact/">Contact</StyledLink>
-        </div>
-        {!user ? (
-          <span className="login_btn">
-            <Link to="/Login">
-              <Button variant="contained" color="success">
-                Sign In
+
+          {!user ? (
+            <span className="login_btn">
+              <Link to="/Login">
+                <Button variant="contained" color="success">
+                  Sign In
+                </Button>
+              </Link>
+            </span>
+          ) : (
+            <span
+              tabIndex={0}
+              role="button"
+              onKeyUp={disconnect}
+              onClick={disconnect}
+              className="logout_btn"
+            >
+              <Button variant="outlined" color="error">
+                Sign Out
               </Button>
-            </Link>
-          </span>
-        ) : (
-          <span
-            tabIndex={0}
-            role="button"
-            onKeyUp={disconnect}
-            onClick={disconnect}
-          >
-            <Button variant="outlined" color="error">
-              Sign Out
-            </Button>
-          </span>
-        )}
+            </span>
+          )}
+        </div>
       </nav>
     </header>
   )

@@ -4,8 +4,8 @@ export const SkillsList = [
       {
         title: "Intégration web ",
         text: [
-          "Intégrer du contenu conformément à une maquette avec HTML et CSS",
-          "Implémenter une interface responsive avec HTML et CSS",
+          "Intégrer du contenu conformément à une maquette avec HTML5 et CSS3",
+          "Implémenter une interface responsive",
           "Installer un environnement de développement front-end",
           "Publication d'un site web ",
         ],
@@ -43,7 +43,7 @@ export const SkillsList = [
       {
         title: "Gestion de projet et outils de développeurs ",
         text: [
-          "Planification du projet, définition des besoins, identification des solutions, présentation de la solution au client",
+          "Planifier un projet, définir les besoins, identifier des solutions, présenter la solution au client",
           "Rédiger les spécifications techniques d'un projet web à partir de besoins fonctionnels",
           "Découper une fonctionnalités en tâches pour préparer le développement",
           "Mettre en place une méthode de veille technologique",

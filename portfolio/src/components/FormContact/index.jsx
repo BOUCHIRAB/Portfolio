@@ -33,23 +33,19 @@ function FormContact() {
   }
 
   return (
-    <section className="contact">
-      <h2>Me contacter</h2>
+    <article className="contact">
+      <h2 className="page_title">Me contacter</h2>
       <div className="form_contenair">
         <Form onSubmit={sendEmail}>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <span>Nom Prénom</span>
-            <Form.Control
-              type="text"
-              placeholder="Nom Prénom"
-              name="from_name"
-            />
+            <Form.Control type="text" name="from_name" />
           </Form.Group>
 
           <br></br>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Adresse email</Form.Label>
-            <Form.Control type="email" placeholder="Adresse email" />
+            <Form.Control type="email" />
 
             <Form.Text className="text-muted" name="user_email">
               <span className="info_mail">Votre mail ne sera pas partagé.</span>
@@ -72,7 +68,7 @@ function FormContact() {
           </Button>
         </Form>
       </div>
-    </section>
+    </article>
   )
 }
 

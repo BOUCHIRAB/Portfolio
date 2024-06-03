@@ -10,7 +10,7 @@ function Footer() {
         <a href="https://github.com/BOUCHIRAB">
           <img src={github} width="30" height="30" alt="logo gituhb"></img>{" "}
         </a>
-        <a href="www.linkedin.com/in/ibtihaj-bouchirab">
+        <a href="https://www.linkedin.com/in/ibtihaj-bouchirab?original_referer=">
           <img src={linkedin2} width="30" height="30" alt="logo linkedin"></img>{" "}
         </a>
         <a href="https://cvdesignr.com/p/6640f2f2dc570" className="button_cv">

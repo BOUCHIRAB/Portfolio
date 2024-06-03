@@ -2,7 +2,6 @@ import React from "react"
 import GlobalSkills from "../../components/GlobalSkills/"
 import ProgressSkills from "../../components/ProgressSkills/"
 import NameHeader from "../../components/NameHeader"
-
 import Darrow from "../../assets/down_arrow.png"
 import Uarrow from "../../assets/up_arrow.png"
 
@@ -10,7 +9,7 @@ function Skills() {
   return (
     <main id="ancre_progress">
       <NameHeader />
-      <h1 className="page_title">Mes Compétences</h1>
+      <h2 className="page_title">Mes Compétences</h2>
       <ProgressSkills />
       Détails
       <a href="#ancre_globalskills">

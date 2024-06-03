@@ -4,7 +4,7 @@ import "./Error.scss"
 
 function MsgError() {
   return (
-    <main>
+    <article>
       <div className="msgerror">
         <h1 className="msgerror_title">404</h1>
         <span className="msgerror_text">
@@ -14,7 +14,7 @@ function MsgError() {
           Retourner sur la page d&apos;accueil
         </Link>
       </div>
-    </main>
+    </article>
   )
 }
 

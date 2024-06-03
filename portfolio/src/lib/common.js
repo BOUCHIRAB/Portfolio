@@ -96,7 +96,7 @@ export async function addWork(data) {
   const bodyFormData = new FormData()
   bodyFormData.append("work", JSON.stringify(work))
   bodyFormData.append("image", data.file[0])
-  console.log(data.file[0])
+
   try {
     return await axios({
       method: "post",

@@ -2,23 +2,20 @@
 .work_details {
   margin-top: 80px;
   margin-bottom: 200px;
-  margin: 80px 10px 200px 10px;
+  margin: 180px 10px 200px 10px;
   display: flex;
   @media (max-width: 1024px) {
-    flex-flow: column wrap;
-    margin: 50px 20px 200px 30px;
+    margin: 150px 20px 200px 30px;
   }
 }
 .work {
   display: flex;
   margin: 0px 0 250px 0;
-  align-items: center;
-  justify-content: center;
-
   @media (max-width: 1024px) {
     flex-flow: column wrap;
     align-items: center;
     margin: 10px;
+    justify-content: space-between;
   }
 
   &_img {

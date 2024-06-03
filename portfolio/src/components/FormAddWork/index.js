@@ -2,13 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Form from "react-bootstrap/Form"
 import { useForm } from "react-hook-form"
 import "./FormAddWork.scss"
-import React, { useEffect, useMemo, useState } from "react"
+import React, { useEffect, useMemo } from "react"
 import * as PropTypes from "prop-types"
 import { addWork } from "../../lib/common"
-
 import SendIcon from "@mui/icons-material/Send"
 import Button from "@mui/material/Button"
-
 import { Link } from "react-router-dom"
 import BtnReturn from "../../assets/return.png"
 
@@ -48,7 +46,7 @@ function FormAddWorks(work) {
       </Link>
 
       <Form className="form_addwork" onSubmit={handleSubmit(onSubmit)}>
-        <h2> Ajouter un Projet</h2>
+        <h2 className="page_title"> Ajouter un Projet</h2>
         <div>
           <input type="hidden" name="id" {...register("id")} />
           <Form.Group className="mb-3">

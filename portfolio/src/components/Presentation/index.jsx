@@ -15,10 +15,11 @@ function Presentation() {
       </div>
       <div className="About_presentation">
         De formation statisticienne, j'ai décidé, après 18 ans de consulting en
-        santé, de réaliser une reconversion professionnelle afin de revenir aux
-        métier du développement. Passionnée et créative, je compte ainsi élargir
-        mes compétences vers de nouveaux défis et contribuer au succès de
-        projets innovants.
+        santé, de réaliser la formation "Développeur WEB" d'Openclassrooms dans
+        le cadre d'une reconversion professionnelle afin de revenir aux métiers
+        du développement informatique. Passionnée et créative, je compte ainsi
+        élargir mes compétences vers de nouveaux défis et contribuer au succès
+        de projets innovants.
       </div>
       <button className="About_btn">
         <Link to={"/Contact"}>CONTACT</Link>

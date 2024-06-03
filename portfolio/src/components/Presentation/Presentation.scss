@@ -3,11 +3,9 @@
 .About {
   display: flex;
   flex-flow: column;
-  align-items: right;
-  margin-top: 50px;
   max-width: 550px;
   width: 550px;
-  margin-top: 150px;
+  margin-top: 250px;
   margin-bottom: 270px;
   @media (max-width: 768px) {
     width: 330px;
@@ -41,7 +39,6 @@
     font-weight: 600;
     color: white;
     font-size: 35px;
-
     @media (max-width: 768px) {
       font-size: 25px;
     }
@@ -67,7 +64,7 @@
 
   &_presentation {
     font-size: 15px;
-    width: 550px;
+    width: 580px;
     @media (max-width: 768px) {
       max-width: 330px;
       font-size: 13px;

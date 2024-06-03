@@ -8,8 +8,7 @@ import Error from "../../pages/Error/"
 import Login from "../../pages/Login/"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
-import AddWorks from "../../pages/AddWorks"
-import UpdateWork from "../../pages/UpdateWork"
+
 import React, { useEffect, useState } from "react"
 import { useUser } from "../../lib/customHooks"
 import { ParallaxProvider } from "react-scroll-parallax"
@@ -29,13 +28,11 @@ function Router() {
           <Route path="/" element={<Home />} />
           <Route path="/Skills/" element={<Skills />} />
           <Route path="/Works/" element={<Works />} />
-          <Route path="/Work/:id" element={<Details />} />
+          <Route path="/Work/:IdWork" element={<Details />} />
 
           <Route path="/Contact/" element={<Contact />} />
           <Route path="/Login/" element={<Login setUser={setUser} />} />
           <Route path="*" element={<Error />} />
-          <Route path="/Admin/" element={<AddWorks />} />
-          <Route path="/work/modifier/:id" element={<UpdateWork />} />
         </Routes>
       </ParallaxProvider>
       <Footer />

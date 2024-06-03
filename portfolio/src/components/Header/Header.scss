@@ -10,7 +10,6 @@ header {
   top: 0;
   left: 0;
   right: 0;
-
   @media (max-width: 1024px) {
     flex-direction: column;
   }
@@ -18,7 +17,11 @@ header {
 
 .navbar {
   margin: 0px 20px 20px 0px;
-
+  @media (max-width: 1024px) {
+    width: 200px;
+    display: flex;
+    align-items: end;
+  }
   &_link {
     font-weight: 500;
     display: flex;
@@ -27,8 +30,7 @@ header {
     padding: 15px 0;
     gap: 27px;
     @media (max-width: 1024px) {
-      position: absolute;
-      gap: 20px;
+      display: none;
     }
   }
 }
@@ -40,11 +42,9 @@ header {
   text-align: center;
   padding: 15px 0;
   gap: 27px;
-
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
-
     background: #48435c;
     font-size: 12px;
     height: 180px;
@@ -61,31 +61,18 @@ header {
 
 .label_burger {
   display: none;
-}
-
-@media (max-width: 1024px) {
-  .navbar {
-    width: 200px;
-    display: flex;
-    align-items: end;
-
-    &_link {
-      display: none;
-    }
-  }
-  .label_burger {
+  @media (max-width: 1024px) {
     width: 100px;
     height: 60px;
     display: flex;
-
     font-size: 40px;
-
     cursor: pointer;
   }
+}
 
-  .login_btn {
-    @media (max-width: 1024px) {
-      display: none;
-    }
+.login_btn,
+.logout_btn {
+  @media (max-width: 1024px) {
+    display: none;
   }
 }
