@@ -124,10 +124,8 @@ export const ListWorks = [
       "Conception complète d'un site web dynamique en React",
       "Construction d'une Single Page Application complète qui respecte une architecture robuste",
       "Déploiement du site en ligne",
-      "Création d'une API REST avec Node, Express et Mongodb",
     ],
-    tools:
-      "HTML, SASS, JAVASCRIPT, REACT, BOOTSTRAP, MUI MATERIAL, NODE, EXPRESS, MONGODB, GITHUB ",
+    tools: "HTML, SASS, JAVASCRIPT, REACT, BOOTSTRAP, MUI MATERIAL, GITHUB ",
     repo: "https://github.com/BOUCHIRAB/Portfolio.git",
     website: "https://bouchirab.fr/",
     pictures: portfolio,

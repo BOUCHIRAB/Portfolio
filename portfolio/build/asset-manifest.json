@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4aaed40a.css",
+    "main.js": "/static/js/main.bd82ae83.js",
+    "static/media/kaushan-script-v18-latin-regular.woff2": "/static/media/kaushan-script-v18-latin-regular.2855d49bba6b2cb7bec5.woff2",
+    "static/media/kasa.webp": "/static/media/kasa.2e552b48bf0e7189f565.webp",
+    "static/media/inter-v13-latin-800.woff2": "/static/media/inter-v13-latin-800.af3824f4adfaba3054f2.woff2",
+    "static/media/inter-v13-latin-300.woff2": "/static/media/inter-v13-latin-300.2d4c4e1b0312ac8dc566.woff2",
+    "static/media/carducci.webp": "/static/media/carducci.1ca5d4dd6c2d4539f056.webp",
+    "static/media/inter-v13-latin-regular.woff2": "/static/media/inter-v13-latin-regular.f1535355a7df553be385.woff2",
+    "static/media/booki.webp": "/static/media/booki.8db5258efa4ebcd1e539.webp",
+    "static/media/work-sans-v19-latin-regular.woff2": "/static/media/work-sans-v19-latin-regular.0c3316f5a8c3abb3f9ff.woff2",
+    "static/media/bckg1-min.webp": "/static/media/bckg1-min.4a09751ab7f51be7165f.webp",
+    "static/media/grimmoire.webp": "/static/media/grimmoire.6ed9c354386039b96980.webp",
+    "static/media/archi.webp": "/static/media/archi.6b63b78597d6ea22d52e.webp",
+    "static/media/QWENTA.webp": "/static/media/QWENTA.cafe721d563468ffecd1.webp",
+    "static/media/portfolio.webp": "/static/media/portfolio.979219086e8c825a5237.webp",
+    "index.html": "/index.html",
+    "static/media/IB.webp": "/static/media/IB.52541e1122a8239350eb.webp",
+    "main.4aaed40a.css.map": "/static/css/main.4aaed40a.css.map",
+    "main.bd82ae83.js.map": "/static/js/main.bd82ae83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4aaed40a.css",
+    "static/js/main.bd82ae83.js"
+  ]
+}

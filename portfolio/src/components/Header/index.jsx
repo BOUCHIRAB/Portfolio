@@ -1,9 +1,7 @@
 import React from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./Header.scss"
 import styled from "styled-components"
-import * as PropTypes from "prop-types"
-import Button from "@mui/material/Button"
 import { useState } from "react"
 
 const StyledLink = styled(Link)`
@@ -21,14 +19,7 @@ const StyledLink = styled(Link)`
   }
 `
 
-function Header({ user, setUser }) {
-  const navigate = useNavigate()
-  const disconnect = () => {
-    localStorage.clear()
-    setUser(null)
-    navigate("/")
-  }
-
+function Header() {
   const [isOpen, setIsOpen] = useState("false")
 
   return (
@@ -46,28 +37,6 @@ function Header({ user, setUser }) {
           <StyledLink to="/Skills/">Compétences</StyledLink>
           <StyledLink to="/Works">Mes réalisations</StyledLink>
           <StyledLink to="/Contact/">Contact</StyledLink>
-
-          {!user ? (
-            <span className="login_btn">
-              <Link to="/Login">
-                <Button variant="contained" color="success">
-                  Sign In
-                </Button>
-              </Link>
-            </span>
-          ) : (
-            <span
-              tabIndex={0}
-              role="button"
-              onKeyUp={disconnect}
-              onClick={disconnect}
-              className="logout_btn"
-            >
-              <Button variant="outlined" color="error">
-                Sign Out
-              </Button>
-            </span>
-          )}
         </div>
       </nav>
     </header>
@@ -75,10 +44,3 @@ function Header({ user, setUser }) {
 }
 
 export default Header
-Header.propTypes = {
-  user: PropTypes.shape({
-    userId: PropTypes.string,
-    token: PropTypes.string,
-  }),
-  setUser: PropTypes.func.isRequired,
-}

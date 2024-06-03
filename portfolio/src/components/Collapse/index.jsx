@@ -19,9 +19,9 @@ function Collapse({ contenttitle, contenttext }) {
           <img src={vector} alt="vector"></img>
         </a>
       </li>
-      <ul key={contenttext.index} className="collapse_open">
+      <li key={contenttext.index} className="collapse_open">
         <li>{contenttext}</li>
-      </ul>
+      </li>
     </ul>
   ) : (
     <ul className="coll">
@@ -35,9 +35,9 @@ function Collapse({ contenttitle, contenttext }) {
           <img src={vector} alt="vector"></img>
         </a>
       </li>
-      <ul key={contenttext.index} className="collapse_close">
+      <li key={contenttext.index} className="collapse_close">
         <li>{contenttext}</li>
-      </ul>
+      </li>
     </ul>
   )
 }

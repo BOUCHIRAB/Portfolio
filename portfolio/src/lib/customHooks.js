@@ -19,21 +19,3 @@ export function useUser() {
 
   return { connectedUser, auth, userLoading }
 }
-
-export function useFilePreview(file) {
-  const fileInput = file[0] ?? []
-  const [imgSrc, setImgSrc] = useState(null)
-
-  useEffect(() => {
-    const fn = fileInput[0]?.name
-    if (file && file[0]?.length > 0) {
-      const newUrl = URL.createObjectURL(file[0][0])
-
-      if (newUrl !== imgSrc) {
-        setImgSrc(newUrl)
-      }
-    }
-  }, [fileInput, fileInput[0]?.name, file, imgSrc])
-
-  return [imgSrc, setImgSrc]
-}
